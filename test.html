@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .seat {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            background-color: #3498db;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .selected {
+            background-color: #2ecc71; /* Set your desired background color for selected seats */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="seat1" class="seat" onclick="toggleSeat('seat1')">1</div>
+    <div id="seat2" class="seat" onclick="toggleSeat('seat2')">2</div>
+    <div id="seat3" class="seat" onclick="toggleSeat('seat3')">3</div>
+    <div id="seat4" class="seat" onclick="toggleSeat('seat4')">4</div>
+    <div id="seat5" class="seat" onclick="toggleSeat('seat5')">5</div>
+    <div id="seat6" class="seat" onclick="toggleSeat('seat6')">6</div>
+
+    <script>
+        function toggleSeat(seatId) {
+            const seat = document.getElementById(seatId);
+
+            // Toggle the 'selected' class to change the background color
+            seat.classList.toggle('selected');
+        }
+    </script>
+
+</body>
+</html>
