@@ -23,7 +23,7 @@ function toggleSeat(seat) {
     } else {
         if (selectedSeats.length < 4 && totalSeats > 0) {
             selectedSeats.push(seat);
-            seat.style.backgroundColor = 'green';
+            seat.style.backgroundColor = 'lightgreen';
             totalSeats--;
         } else {
             alert("You can only select up to 4 seats.");
@@ -123,6 +123,8 @@ function closeModal(){
 const seats = document.querySelectorAll('.seat');
 const info = document.getElementById('info');
 
+let selectSeats = [];
+
 seats.forEach(seat => {
   seat.addEventListener('click', () => {
     seat.classList.toggle('selected');
@@ -130,56 +132,28 @@ seats.forEach(seat => {
  
     const seatInfo = "Economoy";
     const seatPrice = "550";
-    const selectedSeats =document.querySelectorAll('.selected');
-  
-      info.innerHTML = `${seatNumber} ${seatInfo} ${seatPrice}`;
-    
+
+if(seat.classList.contains('selected')){
+  selectSeats.push({seatNumber, seatInfo, seatPrice});
+}
+else{
+  selectSeats = selectSeats.filter(select => select.seatNumber !== seatNumber);
+}
+updateInfo();  
     
   });
 });
 
-
-  // const seats = document.querySelectorAll('.seat');
-  // const info = document.getElementById('info');
-  // let previousSeatId = null;
-
-  // const seatInfo = {
-  //   A1: { info: 'Economy ' },
-  //   A2: { info: 'Economy' },
-  //   A3: { info: 'Economy' },
-  //   A4: { info: 'Economy' },
-  //   B1: { info: 'Economy' },
-  //   B2: { info: 'Economy' },
-  //   B3: { info: 'Economy' },
-  //   B4: { info: 'Economy' }
-  // };
-
-  // function displaySeatInfo(seatId) {
-  //   const selectedSeatInfo = seatInfo[seatId];
-  //   const selectedSeats = document.querySelectorAll('.selected');
-  //   if (selectedSeatInfo) {
-  //     info.innerHTML = `${seatId} ${selectedSeatInfo.info}`;
-  //   } else {
-  //     info.innerHTML = 'No seat information available.';
-  //   }
-  // }
-  // seats.forEach(seat => {
-  //   seat.addEventListener('click', () => {
-  //     const seatId = seat.id;
-  //     seat.classList.toggle('selected');
-  //     if (previousSeatId !== null && previousSeatId !== seatId) {
-  //       seats.forEach(s => {
-  //         if (s.id !== seatId) {
-  //           s.classList.remove('selected');
-  //         }
-  //       });
-  //     }
-  //     previousSeatId = seatId;
-  //     displaySeatInfo(seatId);
-  //   });
-  // });
-
-
+function updateInfo(){
+  if(selectSeats.length > 0){
+    const selectedSeatsInfo = selectSeats.map(select => `${select.seatNumber} ${select.seatInfo} ${select.seatPrice}` ).join('<br>');
+    info.innerHTML = `${selectedSeatsInfo}`;
+  }
+  else{
+    info.innerHTML="no seat added";
+  }
+}
+ 
 // apply button
 function bookSeats() {
     alert("Booking seats: " + selectedSeats.map(seat => seat.innerText).join(", "));
