@@ -5,7 +5,6 @@ function buyTicketHandel(){
   scrollTicketsSection.scrollIntoView({behavior:'smooth'});
 }
 
-
 // addBackgroundColorById()
 
 let selectedSeats = [];
@@ -24,9 +23,8 @@ function toggleSeat(seat) {
     } else {
         if (selectedSeats.length < 4 && totalSeats > 0) {
             selectedSeats.push(seat);
-            seat.style.backgroundColor = 'lightgreen';
+            seat.style.backgroundColor = 'green';
             totalSeats--;
-            // addBookingInfo(seat);
         } else {
             alert("You can only select up to 4 seats.");
         }
@@ -35,31 +33,13 @@ function toggleSeat(seat) {
     seatLeft();
     updatePriceInfo()
     document.getElementById('bookButton').style.display = selectedSeats.length <= 4 ? 'block' : 'none';
+
+
 }
 
+
+
 // booking info
-// function addBookingInfo(seat){
-//   const bookingInfo = document.getElementById('booking-info');
-//     const seatNumber = seat.innerText;
-//     const bookingItem = document.createElement('div');
-//     bookingItem.classList.add('booking-item');
-//     bookingItem.innerHTML = `
-//     <p>${seatNumber} </p>
-//     <p>Economoy</p>
-//     <p>550</p>
-//     `;
-//     bookingInfo.appendChild(bookingItem);
-// }
-// // remove booking info
-// function reamoveBookingInfo(seat){
-//   const seatNumber = seat.innerText;
-//   const bookingInfoItems = document.querySelectorAll('.booking-item ');
-//   bookingInfoItems.forEach(item => {
-//     if(item.innerText.includes(seatNumber)){
-//       item.remove();
-//     }
-//   });
-// }
 
 // count seats
 function selectedSeatsCount(){
@@ -133,10 +113,9 @@ document.getElementById('numberInput').addEventListener('input', function(){
 });
 
 
-
 function showModal(){
   const modal = document.getElementById('myModal');
-  modal.style.display = 'block'
+  modal.style.display = 'block';
 }
 function closeModal(){
   const modal = document.getElementById('myModal');

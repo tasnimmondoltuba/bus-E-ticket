@@ -48,11 +48,6 @@
 
 </head>
 <body>
-
-
-
-
-
     <header>
 <!-- started header  -->
 <!-- nav bar section end -->
@@ -233,7 +228,6 @@
             </div>
             </div>
 
-
                 <!-- half circle with dotted -->
                 <span class="bg-[#f7f8f8] border-[#f7f8f8] h-[50px] w-[100px] rounded-b-full lg:absolute top-0 right-72"></span>
                 <span class="bg-[#f7f8f8] border-[#f7f8f8]  h-[50px] w-[100px] rotate-180 rounded-b-full lg:absolute bottom-0 right-72"></span>
@@ -269,10 +263,10 @@
          <!-- sit number section start -->
          <div class="grid grid-cols-5 mt-10 gap-5">
             <div class="text-center py-4">A</div>
-            <div onclick="toggleSeat(this)" id="A1" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">A1</div>
-            <div onclick="toggleSeat(this)" id="A2" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">A2</div>
-            <div onclick="toggleSeat(this)" id="A3" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">A3</div>
-            <div onclick="toggleSeat(this)" id="A4" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">A4</div>
+            <div onclick="toggleSeat(this)" id="A1" onclick="showseatInfo('A1')"  class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">A1</div>
+            <div onclick="toggleSeat(this)" id="A2" onclick="showseatInfo('A2')" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">A2</div>
+            <div onclick="toggleSeat(this)" id="A3" onclick="showseatInfo('A3')" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">A3</div>
+            <div onclick="toggleSeat(this)" id="A4" onclick="showseatInfo('A4')" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">A4</div>
             <div class="text-center py-4">B</div>
             <div onclick="toggleSeat(this)" id="B1"  class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">B1</div>
             <div onclick="toggleSeat(this)" id="B2" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">B2</div>
@@ -336,11 +330,12 @@
                     <p class="font-extrabold">Price</p>
                 </div>
                 <hr class="my-5 w-[470px]">
-                <div id="booking-info">
-                    <!-- <p class="font-semibold text-xl"></p> -->
-                    <!-- <p class="font-semibold text-xl">Economoy</p>
-                    <p class="font-semibold text-xl">550</p> -->
-                </div>
+                <!-- work -->
+              <!-- <div class="info-container flex justify-around">
+                <h2>Seat Information :</h2>
+                <p id="selectedSeatInfo"></p>
+              </div> -->
+              <!-- work -->
                 <hr class="my-5 w-[470px]">
                 <div class="font-extrabold flex justify-between items-center">
                     <p>Total Price</p>
