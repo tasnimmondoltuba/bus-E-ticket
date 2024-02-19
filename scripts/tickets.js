@@ -111,8 +111,6 @@ document.getElementById('numberInput').addEventListener('input', function(){
     nextButton.setAttribute('disabled', true);
   }
 });
-
-
 function showModal(){
   const modal = document.getElementById('myModal');
   modal.style.display = 'block';
@@ -121,6 +119,67 @@ function closeModal(){
   const modal = document.getElementById('myModal');
   modal.style.display = "none";
 }
+// booking info
+const seats = document.querySelectorAll('.seat');
+const info = document.getElementById('info');
+
+seats.forEach(seat => {
+  seat.addEventListener('click', () => {
+    seat.classList.toggle('selected');
+    const seatNumber = seat.id;
+ 
+    const seatInfo = "Economoy";
+    const seatPrice = "550";
+    const selectedSeats =document.querySelectorAll('.selected');
+  
+      info.innerHTML = `${seatNumber} ${seatInfo} ${seatPrice}`;
+    
+    
+  });
+});
+
+
+  // const seats = document.querySelectorAll('.seat');
+  // const info = document.getElementById('info');
+  // let previousSeatId = null;
+
+  // const seatInfo = {
+  //   A1: { info: 'Economy ' },
+  //   A2: { info: 'Economy' },
+  //   A3: { info: 'Economy' },
+  //   A4: { info: 'Economy' },
+  //   B1: { info: 'Economy' },
+  //   B2: { info: 'Economy' },
+  //   B3: { info: 'Economy' },
+  //   B4: { info: 'Economy' }
+  // };
+
+  // function displaySeatInfo(seatId) {
+  //   const selectedSeatInfo = seatInfo[seatId];
+  //   const selectedSeats = document.querySelectorAll('.selected');
+  //   if (selectedSeatInfo) {
+  //     info.innerHTML = `${seatId} ${selectedSeatInfo.info}`;
+  //   } else {
+  //     info.innerHTML = 'No seat information available.';
+  //   }
+  // }
+  // seats.forEach(seat => {
+  //   seat.addEventListener('click', () => {
+  //     const seatId = seat.id;
+  //     seat.classList.toggle('selected');
+  //     if (previousSeatId !== null && previousSeatId !== seatId) {
+  //       seats.forEach(s => {
+  //         if (s.id !== seatId) {
+  //           s.classList.remove('selected');
+  //         }
+  //       });
+  //     }
+  //     previousSeatId = seatId;
+  //     displaySeatInfo(seatId);
+  //   });
+  // });
+
+
 // apply button
 function bookSeats() {
     alert("Booking seats: " + selectedSeats.map(seat => seat.innerText).join(", "));

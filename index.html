@@ -43,6 +43,14 @@
        .center{
        padding: 200px 600px;
        }
+       .selected{
+        
+       }
+       #info{
+        display: flex;
+        gap: 30px;
+       }
+       
     </style>
 
 
@@ -263,55 +271,55 @@
          <!-- sit number section start -->
          <div class="grid grid-cols-5 mt-10 gap-5">
             <div class="text-center py-4">A</div>
-            <div onclick="toggleSeat(this)" id="A1" onclick="showseatInfo('A1')"  class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">A1</div>
-            <div onclick="toggleSeat(this)" id="A2" onclick="showseatInfo('A2')" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">A2</div>
-            <div onclick="toggleSeat(this)" id="A3" onclick="showseatInfo('A3')" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">A3</div>
-            <div onclick="toggleSeat(this)" id="A4" onclick="showseatInfo('A4')" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">A4</div>
+            <div onclick="toggleSeat(this)" id="A1" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">A1</div>
+            <div onclick="toggleSeat(this)" id="A2" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">A2</div>
+            <div onclick="toggleSeat(this)" id="A3" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">A3</div>
+            <div onclick="toggleSeat(this)" id="A4" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">A4</div>
             <div class="text-center py-4">B</div>
-            <div onclick="toggleSeat(this)" id="B1"  class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">B1</div>
-            <div onclick="toggleSeat(this)" id="B2" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">B2</div>
-            <div onclick="toggleSeat(this)" id="B3" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">B3</div>
-            <div onclick="toggleSeat(this)" id="B4" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">B4</div>
+            <div onclick="toggleSeat(this)" id="B1"  class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">B1</div>
+            <div onclick="toggleSeat(this)" id="B2" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">B2</div>
+            <div onclick="toggleSeat(this)" id="B3" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">B3</div>
+            <div onclick="toggleSeat(this)" id="B4" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">B4</div>
             <div class="text-center py-4">C</div>
-            <div onclick="toggleSeat(this)" id="C1" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">C1</div>
-            <div onclick="toggleSeat(this)" id="C2" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">C2</div>
-            <div onclick="toggleSeat(this)" id="C3" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">C3</div>
-            <div onclick="toggleSeat(this)" id="C4" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">C4</div>
+            <div onclick="toggleSeat(this)" id="C1" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">C1</div>
+            <div onclick="toggleSeat(this)" id="C2" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">C2</div>
+            <div onclick="toggleSeat(this)" id="C3" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">C3</div>
+            <div onclick="toggleSeat(this)" id="C4" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">C4</div>
             <div class="text-center py-4">D</div>
-            <div onclick="toggleSeat(this)" id="D1" class=" rounded-xl py-4 text-center font-bold">D1</div>
-            <div onclick="toggleSeat(this)" id="D2" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">D2</div>
-            <div onclick="toggleSeat(this)" id="D3" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">D3</div>
-            <div onclick="toggleSeat(this)" id="D4" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">D4</div>
+            <div onclick="toggleSeat(this)" id="D1" class="seat  rounded-xl py-4 text-center font-bold">D1</div>
+            <div onclick="toggleSeat(this)" id="D2" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">D2</div>
+            <div onclick="toggleSeat(this)" id="D3" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">D3</div>
+            <div onclick="toggleSeat(this)" id="D4" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">D4</div>
             <div class="text-center py-4">E</div>
-            <div onclick="toggleSeat(this)" id="E1" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">E1</div>
-            <div onclick="toggleSeat(this)" id="E2" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">E2</div>
-            <div onclick="toggleSeat(this)" id="E3" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">E3</div>
-            <div onclick="toggleSeat(this)" id="E4" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">E4</div>
+            <div onclick="toggleSeat(this)" id="E1" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">E1</div>
+            <div onclick="toggleSeat(this)" id="E2" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">E2</div>
+            <div onclick="toggleSeat(this)" id="E3" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">E3</div>
+            <div onclick="toggleSeat(this)" id="E4" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">E4</div>
             <div class="text-center py-4">F</div>
-            <div onclick="toggleSeat(this)" id="F1" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">F1</div>
-            <div onclick="toggleSeat(this)" id="F2" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">F2</div>
-            <div onclick="toggleSeat(this)" id="F3" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">F3</div>
-            <div onclick="toggleSeat(this)" id="F4" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">F4</div>
+            <div onclick="toggleSeat(this)" id="F1" class=" seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">F1</div>
+            <div onclick="toggleSeat(this)" id="F2" class=" seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">F2</div>
+            <div onclick="toggleSeat(this)" id="F3" class=" seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">F3</div>
+            <div onclick="toggleSeat(this)" id="F4" class=" seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">F4</div>
             <div class="text-center py-4">G</div>
-            <div onclick="toggleSeat(this)" id="G1" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">G1</div>
-            <div onclick="toggleSeat(this)" id="G2" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">G2</div>
-            <div onclick="toggleSeat(this)" id="G3" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">G3</div>
-            <div onclick="toggleSeat(this)" id="G4" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">G4</div>
+            <div onclick="toggleSeat(this)" id="G1" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">G1</div>
+            <div onclick="toggleSeat(this)" id="G2" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">G2</div>
+            <div onclick="toggleSeat(this)" id="G3" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">G3</div>
+            <div onclick="toggleSeat(this)" id="G4" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">G4</div>
             <div class="text-center py-4">H</div>
-            <div onclick="toggleSeat(this)" id="H1" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">H1</div>
-            <div onclick="toggleSeat(this)" id="H2" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">H2</div>
-            <div onclick="toggleSeat(this)" id="H3" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">H3</div>
-            <div onclick="toggleSeat(this)" id="H4" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">H4</div>
+            <div onclick="toggleSeat(this)" id="H1" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">H1</div>
+            <div onclick="toggleSeat(this)" id="H2" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">H2</div>
+            <div onclick="toggleSeat(this)" id="H3" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">H3</div>
+            <div onclick="toggleSeat(this)" id="H4" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">H4</div>
             <div class="text-center py-4">I</div>
-            <div onclick="toggleSeat(this)" id="I1" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">I1</div>
-            <div onclick="toggleSeat(this)" id="I2" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">I2</div>
-            <div onclick="toggleSeat(this)" id="I3" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">I3</div>
-            <div onclick="toggleSeat(this)" id="I4" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">I4</div>
+            <div onclick="toggleSeat(this)" id="I1" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">I1</div>
+            <div onclick="toggleSeat(this)" id="I2" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">I2</div>
+            <div onclick="toggleSeat(this)" id="I3" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">I3</div>
+            <div onclick="toggleSeat(this)" id="I4" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">I4</div>
             <div class="text-center py-4">J</div>
-            <div onclick="toggleSeat(this)" id="J1" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">J1</div>
-            <div onclick="toggleSeat(this)" id="J2" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">J2</div>
-            <div onclick="toggleSeat(this)" id="J3" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">J3</div>
-            <div onclick="toggleSeat(this)" id="J4" class="bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">J4</div>
+            <div onclick="toggleSeat(this)" id="J1" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">J1</div>
+            <div onclick="toggleSeat(this)" id="J2" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">J2</div>
+            <div onclick="toggleSeat(this)" id="J3" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">J3</div>
+            <div onclick="toggleSeat(this)" id="J4" class="seat bg-[#f7f8f8] rounded-xl py-4 text-center font-bold">J4</div>
             </div>
          <!--divsit number section end -->
         </div>
@@ -331,10 +339,9 @@
                 </div>
                 <hr class="my-5 w-[470px]">
                 <!-- work -->
-              <!-- <div class="info-container flex justify-around">
-                <h2>Seat Information :</h2>
-                <p id="selectedSeatInfo"></p>
-              </div> -->
+              <div id="info" class="mx-44">
+             
+              </div>
               <!-- work -->
                 <hr class="my-5 w-[470px]">
                 <div class="font-extrabold flex justify-between items-center">
